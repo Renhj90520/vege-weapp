@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/dishdetail/dishdetail",
+    "pages/order/order",
+    "pages/orderlist/orderlist",
+    "pages/shoppingcart/shoppingcart"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2277da",
+    "navigationBarTextStyle": "white",
+    "windowBackground": "#1c1b16"
+  },
+  "debug": true,
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "菜谱",
+        "iconPath": "image/cutlery.png",
+        "selectedIconPath": "image/cutlery-active.png"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "购物车",
+        "iconPath": "image/shopping.png",
+        "selectedIconPath": "image/shopping-cart-active.png"
+      },
+      {
+        "pagePath": "pages/orderlist/orderlist",
+        "text": "订单列表",
+        "iconPath": "image/list.png",
+        "selectedIconPath": "image/list-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}

@@ -1,0 +1,23 @@
+/* pages/orderlist/orderlist.wxss */
+
+.container {
+  padding: 6px;
+  line-height: 30px;
+}
+
+.order-item {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  color: #929292;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 0;
+}
+.total {
+  color: rgb(255, 25, 20);
+}

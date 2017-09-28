@@ -1,0 +1,30 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class='container'>
+  <scroll-view class='orderlist-container' scroll-y="true">
+    <view wx:for-items='{{orderlist}}' wx:for-item="order" class='order-item'>
+      <view class='order-state'>
+        <text>{{order.State}}</text>
+      </view>
+      <view class='order-time'>
+        <text>{{order.CreateTime}}</text>
+      </view>
+      <view class='product' wx:for-item="product" wx:for-items='{{order.Products}}'>
+        <view class='product-info'>
+          <view class='product'>
+            <text>{{product.Name}}</text>
+            <text>￥{{product.Price}}/{{product.UnitName}}</text>
+          </view>
+          <text>数量:{{product.Count}}</text>
+        </view>
+        <view class='total'>
+          <text>共{{order.Products.length}}件商品 合计￥{{order.total}}</text>
+          <text wx:if="{{order.DeliveryCharge>0}}">含运费￥{{order.DeliveryCharge}}</text>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+  <view class='empty' wx:if="{{orderlist.length===0}}">
+    <image src='/image/empty.png' class='empty__img'></image>
+  </view>
+</view>

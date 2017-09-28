@@ -1,0 +1,72 @@
+/**app.wxss**/
+
+page {
+  background: #f2f2f2;
+}
+.container {
+  height: 100vh;
+}
+.empty__img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.6;
+}
+.empty {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.button-container{
+  padding: 0 6px;
+}
+.btn-primary {
+  background: #5cb85c;
+  color: white;
+}
+.operator-container{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.operator{
+  width: 50px;
+  height: 50px;
+  background: #fe1914;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 1px 1px 5px #951a08;
+  color: white;
+  font-size: 14px;
+  padding: 0;
+}
+.form-group{
+  margin-bottom: 15px;
+}
+.label{
+  display: block;
+  margin-bottom: 6px;
+  padding-left: 2px;
+}
+.form-control{
+  display: block;
+  height: 28px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}

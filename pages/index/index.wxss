@@ -1,0 +1,32 @@
+.container{
+  padding: 8px;
+}
+.dish-item {
+  display: flex;
+  background: white;
+  padding: 8px;
+  color: #929292;
+  margin-bottom: 12px;
+}
+.dish-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 6px;
+}
+.dish-info{
+  display: flex;
+  flex-direction: column;
+}
+.dish-title{
+  font-size: 24px;
+}
+.dish-recipes-container{
+  text-overflow: ellipsis;
+  height: 60px;
+  line-height: 30px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.dish-recipes{
+  font-size: 16px;
+}

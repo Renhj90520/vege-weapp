@@ -1,0 +1,34 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<view class='container'>
+  <view class='total-container' wx:if="{{cartlist.length>0}}">
+    <text class='total'>总计：￥{{totalcount}}</text>
+    <text wx:if="{{hasdelivery}}" class='total'>(含运费￥5)</text>
+  </view>
+  <scroll-view class='cart-container' scroll-y="true">
+    <block wx:for-items="{{cartlist}}" wx:for-item="cart">
+      <view class='cart-item'>
+        <view class='cart-img-container'>
+          <image src='{{cart.Picture}}' class='cart-img'></image>
+        </view>
+        <view class='cart-info'>
+          <text class='item-name'>{{cart.Name}}</text>
+          <text class='item-info'>￥{{cart.Price}}/{{cart.UnitName}}</text>
+          <view class='operator-group'>
+            <button class='btn-operator' data-item='{{cart}}' bindtap='decrease'>-</button>
+            <input type='number' disabled='true' class='item-count' value='{{cart.Count}}' />
+            <button class='btn-operator' data-item="{{cart}}" bindtap='increase'>+</button>
+          </view>
+        </view>
+        <view class='remove-container' data-item='{{cart}}' bindtap='removeItem'>
+          <text class='remove'>X</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class='empty ' wx:if="{{cartlist.length===0}}">
+    <image src='/image/empty.png ' class='empty__img '></image>
+  </view>
+  <view wx:if='{{cartlist.length>0}}' class='operator-container'>
+    <button class='operator' bindtap='gotoOrder'>结算</button>
+  </view>
+</view>

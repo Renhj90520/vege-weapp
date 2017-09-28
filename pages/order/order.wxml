@@ -1,0 +1,53 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <view wx:if='{{address}}' class='address-container'>
+    <view class='personinfo'>
+      <view class='name'>{{address.Name}}</view>
+      <view class='phone'>{{address.Phone}}</view>
+    </view>
+    <view class='street'>{{address.Street}}</view>
+  </view>
+  <view wx:if="{{!address}}" class='btnadd-container'>
+    <button class='btn-primary' bindtap='showmodal'>添加地址</button>
+  </view>
+  <scroll-view class='orderlist-container'>
+    <block wx:for-items="{{orderlist}}" wx:for-item="order">
+      <view class='order-item'>
+        <view class='order-info'>
+          <text class='item-name'>{{order.Name}}</text>
+          <text class='item-info'>￥{{order.Price}}/{{order.UnitName}}  *  {{order.Count}}</text>
+          <view class='item-cost'>小计：￥{{order.Cost}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view class='bottom-bar'>
+  <view class='total'>
+    <text>总计：￥{{totalcost}}</text>
+    <text wx:if="{{hasdelivery}}">(含运费￥5)</text>
+  </view>
+  <view class='btnpay' bindtap='dopay'>
+    <text style='color:white;'>支付</text>
+  </view>
+</view>
+<view class='shield' hidden='{{!isopen}}' bindtap='hidemodal'></view>
+<view class='modal' hidden='{{!isopen}}'>
+  <view class='modal-content'>
+    <form catchsubmit="addAddr">
+      <view class='form-group'>
+        <label class='label' for='name'>姓名</label>
+        <input class='form-control' name='name' id='name' type='text'></input>
+      </view>
+      <view class='form-group'>
+        <label class='label' for='phone'>电话</label>
+        <input class='form-control' name='phone' id='phone' type='number'></input>
+      </view>
+      <view class='form-group'>
+        <label class='label' for='street'>详细地址</label>
+        <input class='form-control' name='street' id='street' type='text'></input>
+      </view>
+      <button class='btn-primary' formType='submit'>提交</button>
+    </form>
+  </view>
+</view>

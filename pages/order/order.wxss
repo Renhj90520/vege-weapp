@@ -1,0 +1,97 @@
+/* pages/order/order.wxss */
+
+.container {
+  padding: 12px;
+  display: flex;
+  color: #929292;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.orderlist-container {
+  padding-bottom: 56px;
+}
+
+.address-container {
+  background: white;
+  max-height: 90px;
+  line-height: 30px;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+
+.personinfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  flex-grow: 1;
+}
+
+.phone {
+  flex-grow: 1;
+}
+
+.order-item {
+  background: white;
+  padding: 6px;
+  margin-top: 12px;
+  line-height: 30px;
+}
+
+.item-cost {
+  color: rgb(255, 25, 20);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  padding-left: 6px;
+  width: 100%;
+}
+
+.total {
+  color: rgb(255, 25, 20);
+  flex-grow: 1;
+}
+
+.btnpay {
+  flex-grow: 1;
+  background: rgb(255, 25, 20);
+  color: white;
+  text-align: center;
+}
+
+.shield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 665;
+}
+
+.modal {
+  backface-visibility: hidden;
+  position: fixed;
+  top: 50%;
+  z-index: 666;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 17rem;
+  background: #2a9fbc;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+}

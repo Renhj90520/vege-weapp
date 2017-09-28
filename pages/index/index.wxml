@@ -1,0 +1,22 @@
+<view class="container">
+  <scroll-view scroll-y="true" bindscrolltolower="loadData">
+    <block class='dish-item-container' wx:for-items="{{dishlist}}" wx:for-item="dish">
+      <navigator url='/pages/dishdetail/dishdetail?id={{dish.Id}}'>
+        <view class='dish-item'>
+          <view class='dish-img-container'>
+            <image src='{{dish.Picture}}' class='dish-img'></image>
+          </view>
+          <view class='dish-info'>
+            <text class='dish-title'>{{dish.Name}}</text>
+            <view class='dish-recipes-container'>
+              <text class='dish-recipes'>{{dish.recipesStr}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </scroll-view>
+  <view class='empty' wx:if="{{dishlist.length===0}}">
+    <image src='/image/empty.png' class='empty__img'></image>
+  </view>
+</view>

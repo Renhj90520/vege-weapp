@@ -1,0 +1,79 @@
+/* pages/shoppingcart/shoppingcart.wxss */
+
+.total-container {
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 6px;
+  position: fixed;
+  top: 0;
+  display: block;
+  z-index: 666;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+scroll-view {
+  width: auto;
+}
+
+.cart-container {
+  margin-top: 50px;
+  padding: 8px;
+}
+
+.cart-item {
+  display: flex;
+  background: white;
+  padding: 6px 6px 0;
+  margin-bottom: 12px;
+  flex-direction: row;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 6px;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  flex-grow: 1;
+}
+
+.operator-group {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  width: 140px;
+}
+
+.btn-operator {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  background: #5cb85c;
+}
+
+.item-count {
+  width: 30px;
+  padding-left: 6px;
+}
+
+.remove-container{
+  width: 30px;
+  background: rgba(255, 25, 20, .6);
+  height: 112px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  margin-right: -6px;
+  margin-top: -6px;
+}
